@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="it"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>USAC Wrapped 2018–2026 · Deluxe</title>
+<style>
+:root{color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);--glass:rgba(255,255,255,.105);--line:rgba(255,255,255,.18)}
+*{box-sizing:border-box;margin:0}
+html,body{height:100%;background:#090713;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;color:#fff;overflow:hidden;-webkit-tap-highlight-color:transparent}
+body{background-image:radial-gradient(ellipse at 12% 10%,#7b2ff728,transparent 38%),radial-gradient(ellipse at 88% 90%,#f107a320,transparent 35%)}
+#app{height:100%;height:100dvh;max-width:480px;margin:0 auto;position:relative;overflow:hidden;isolation:isolate;box-shadow:0 0 90px #000b;border-inline:1px solid #ffffff12}
+.bars{position:absolute;top:max(10px,env(safe-area-inset-top,0px));left:12px;right:12px;display:flex;gap:4px;z-index:5}
+.bars i{flex:1;height:4px;background:#ffffff30;border-radius:99px;overflow:hidden;box-shadow:0 1px 5px #0002}
+.bars i b{display:block;height:100%;width:0;background:linear-gradient(90deg,#fff,#bdfff5);border-radius:99px;box-shadow:0 0 9px #bafff4aa;transition:width .25s ease}
+.bars i.on b{width:100%}
+.s{position:absolute;inset:0;display:none;flex-direction:column;justify-content:center;padding:58px 25px 48px;overflow:hidden;isolation:isolate;touch-action:pan-y}
+.s::before{content:"";position:absolute;inset:-20%;z-index:0;pointer-events:none;background:radial-gradient(circle at 12% 18%,rgba(255,255,255,.20),transparent 23%),radial-gradient(circle at 90% 32%,rgba(255,255,255,.12),transparent 25%),radial-gradient(ellipse at 42% 110%,rgba(7,4,24,.42),transparent 52%);mix-blend-mode:screen;opacity:.9;animation:aurora 14s ease-in-out infinite alternate}
+.s::after{content:"";position:absolute;inset:7px;z-index:0;pointer-events:none;border:1px solid rgba(255,255,255,.12);border-radius:27px;box-shadow:inset 0 0 30px rgba(255,255,255,.025)}
+.s .in{position:relative;z-index:1}
+.s.show{display:flex}
+.s.show .pop{animation:pop .58s cubic-bezier(.2,1.25,.4,1) both}
+@keyframes pop{from{transform:translateY(14px) scale(.94);opacity:0;filter:blur(4px)}to{transform:none;opacity:1;filter:none}}
+@keyframes aurora{0%{transform:translate3d(-1.5%,0,0) scale(1);opacity:.72}100%{transform:translate3d(1.5%,-1%,0) scale(1.05);opacity:1}}
+@media (prefers-reduced-motion:reduce){.s.show .pop{animation:none}.s::before{animation:none}.row .bar{transition:none}}
+h1{font-size:clamp(34px,10.5vw,56px);font-weight:950;line-height:.96;letter-spacing:-1.8px;text-transform:uppercase;text-wrap:balance;text-shadow:0 5px 26px rgba(0,0,0,.16)}
+.big{font-size:clamp(64px,26vw,120px);font-weight:950;line-height:.88;letter-spacing:-4px;text-shadow:0 8px 35px rgba(0,0,0,.16)}
+p{font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-weight:570;font-size:16px;line-height:1.34;margin-top:13px;opacity:.95;text-wrap:pretty}
+.sm{font-size:12px;line-height:1.35;opacity:.76}
+.row{display:flex;align-items:center;gap:8px;margin:7px 0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Arial,sans-serif;font-weight:800;font-size:14px}
+.row span.n{width:92px;flex:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.row .bar{height:18px;border-radius:99px;background:linear-gradient(90deg,#fff,#c9fff7);min-width:6px;transition:width .8s;box-shadow:0 2px 12px #fff2}
+.row em{font-style:normal;font-size:12px;opacity:.9;font-variant-numeric:tabular-nums}
+.chip{display:inline-flex;align-items:center;gap:6px;background:rgba(5,4,16,.32);border:1px solid rgba(255,255,255,.2);border-radius:99px;padding:6px 12px;font:800 11px Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:.065em;text-transform:uppercase;margin-bottom:13px;align-self:flex-start;backdrop-filter:blur(14px);box-shadow:0 5px 22px #0001}
+.aw{background:rgba(0,0,0,.20);border:1px solid rgba(255,255,255,.14);border-radius:16px;padding:10px 13px;margin:6px 0;font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-size:13px;font-weight:570;line-height:1.32;box-shadow:0 8px 24px rgba(0,0,0,.07);backdrop-filter:blur(12px)}
+.aw b{font-size:14px;font-weight:850}
+.hours{display:flex;align-items:flex-end;gap:3px;height:150px;margin-top:18px;padding:0 1px}
+.hours div{flex:1;background:linear-gradient(180deg,#ffffff,#ffffff86);border:1px solid #ffffff12;border-bottom:0;border-radius:4px 4px 0 0;min-height:3px;box-shadow:0 0 12px #ffffff12}
+.hl{display:flex;justify-content:space-between;font:750 10px Inter,ui-sans-serif,system-ui,sans-serif;opacity:.72;margin-top:5px}
+.in{display:flex;flex-direction:column;width:100%;min-width:0}.s{overflow:hidden!important}.nav{position:absolute;inset:0;display:flex;z-index:4}
+.nav div{flex:1}.nav div:first-child{flex:.35}
+.hint{position:absolute;bottom:max(13px,env(safe-area-inset-bottom,0px));left:50%;right:auto;transform:translateX(-50%);text-align:center;font:750 10px Inter,ui-sans-serif,system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;white-space:nowrap;opacity:.9;z-index:5;pointer-events:none;padding:8px 12px;border:1px solid #ffffff24;border-radius:99px;background:rgba(7,5,18,.42);backdrop-filter:blur(16px);box-shadow:0 5px 20px #0002}
+.emo{font-size:64px;line-height:1;filter:drop-shadow(0 8px 15px #0002)}
+.words span{display:inline-block;background:#00000040;border:1px solid #ffffff1a;border-radius:99px;padding:6px 14px;margin:4px 4px 0 0;font-weight:800}
+.chatlog{display:flex;flex-direction:column;gap:7px;margin-top:4px}
+.bubble{align-self:flex-start;max-width:95%;padding:9px 12px;border-radius:14px 14px 14px 5px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.16);box-shadow:0 7px 18px rgba(0,0,0,.08);backdrop-filter:blur(12px);font-family:Inter,ui-sans-serif,system-ui,sans-serif}
+.bubble:nth-child(even){align-self:flex-end;border-radius:14px 14px 5px 14px;background:rgba(0,0,0,.19)}
+.bubble .who{display:block;font-size:9px;font-weight:900;letter-spacing:.09em;text-transform:uppercase;opacity:.7;margin-bottom:3px}
+.bubble p{font-size:clamp(12px,3.45vw,14px);line-height:1.27;font-weight:650;margin:0;opacity:1}
+.scene-note{font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-size:13px;line-height:1.3;font-weight:750;margin-top:11px;padding:10px 12px;border-radius:13px;background:rgba(0,0,0,.19);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(12px)}
+@media (hover:hover){.aw,.bubble{transition:transform .2s ease,border-color .2s ease}.aw:hover,.bubble:hover{transform:translateY(-2px);border-color:#ffffff45}}
+
+.s{padding:58px 24px 66px}
+@media(max-height:560px){.s{padding:44px 18px 54px}}
+h1{font-size:clamp(28px,min(10.5vw,6.4dvh),56px);overflow-wrap:anywhere}
+.big{font-size:clamp(56px,min(26vw,15dvh),120px);font-variant-numeric:tabular-nums}
+p,.aw,.bubble p,.scene-note{overflow-wrap:break-word;hyphens:auto}
+.aw{min-width:0}.row span.n{width:clamp(76px,26vw,112px)}
+.bars i b{transition:none}.bars i.cur b{width:0}
+.s.show{animation:wipe .6s cubic-bezier(.7,0,.2,1) both}
+@keyframes wipe{from{clip-path:circle(0% at 50% 100%)}to{clip-path:circle(150% at 50% 100%)}}
+.s.show .in>*:not(.pop),.s.show .aw,.s.show .row{animation:up .6s cubic-bezier(.2,.9,.3,1) both;animation-delay:calc(.25s + var(--j,0)*70ms)}
+@keyframes up{from{opacity:0;transform:translateY(24px);filter:blur(6px)}to{opacity:1;transform:none;filter:none}}
+.row .bar{transform-origin:left}.s.show .row .bar{animation:gr 1s cubic-bezier(.2,.9,.3,1) both;animation-delay:calc(.4s + var(--j,0)*70ms)}
+@keyframes gr{from{transform:scaleX(0)}}
+.hours div{transform-origin:bottom}.s.show .hours div{animation:gh .9s cubic-bezier(.2,.9,.3,1) both;animation-delay:calc(.3s + var(--j,0)*35ms)}
+@keyframes gh{from{transform:scaleY(0)}}
+.bubble{opacity:0}.s.show .bubble{animation:bub .5s cubic-bezier(.2,1.5,.4,1) both;animation-delay:calc(.4s + var(--j,0)*.5s)}
+@keyframes bub{from{opacity:0;transform:translateY(16px) scale(.8)}to{opacity:1;transform:none}}
+.orb{position:absolute;z-index:0;top:-12%;right:-24%;width:min(62vw,300px);aspect-ratio:1;border-radius:38% 62% 55% 45%/50% 40% 60% 50%;background:conic-gradient(#ffffff55,#ffffff00,#ffd60a66,#ffffff00,#ffffff55);pointer-events:none;animation:spin 24s linear infinite}
+.orb.o2{top:auto;right:auto;bottom:-14%;left:-26%;width:min(74vw,350px);animation-direction:reverse;animation-duration:34s;background:conic-gradient(#00f5d455,#ffffff00,#ff4d9a55,#ffffff00,#00f5d455)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.cf{position:absolute;top:-20px;left:var(--x);width:9px;height:16px;background:var(--c);z-index:3;border-radius:2px;pointer-events:none;animation:fall var(--d) linear var(--w) both}
+@keyframes fall{to{transform:translateY(110dvh) rotate(720deg)}}
+@media(prefers-reduced-motion:reduce){.s.show,.s.show *,.orb,.cf{animation:none!important}.s.show *,.bubble{opacity:1!important}.cf{display:none}}
+</style></head><body>
+<div id="app">
+<div class="bars" id="bars"></div>
+
+<!-- 1 -->
+<section class="s" style="background:linear-gradient(160deg,#7b2ff7,#f107a3)">
+<div class="chip pop">il tuo Wrapped 2018–2026</div>
+<h1 class="pop">USAC🐦💛🦄🚑<br>Wrapped</h1>
+<p>Otto anni di niente di utile. Abbiamo letto tutto. Purtroppo.</p></section>
+
+<!-- 2 -->
+<section class="s" style="background:#ffd60a;color:#1a1033">
+<p class="sm" style="color:#1a1033">Avete scritto la bellezza di</p>
+<div class="big pop">85.234</div>
+<h1 style="font-size:34px;margin-top:6px">messaggi</h1>
+<p>Sono circa <b>446.000 parole</b> in <b>2.768 giorni</b> diversi. Con metà di quel tempo ci laureavate in medicina. Invece avete scritto "qualcuno?".</p></section>
+
+<!-- 3 -->
+<section class="s" style="background:linear-gradient(180deg,#00c896,#0a6e5a)">
+<h1 class="pop" style="font-size:36px">I più rompicoglioni</h1>
+<p class="sm">messaggi inviati, top 8</p>
+<div id="top"></div></section>
+
+<!-- 4 -->
+<section class="s" style="background:#ff4d2e">
+<div class="chip">Artista più ascoltato</div>
+<h1 class="pop">Adam</h1>
+<div class="big pop" style="font-size:clamp(60px,22vw,100px)">11.315</div>
+<p>messaggi. Un messaggio su sette è suo. <b>Nessun altro ci è andato vicino</b>, il secondo (Marcello) ne ha 6.600. Ha anche aperto la chat dopo ore di silenzio ben <b>523 volte</b>: il tuo sveglia-chat personale.</p></section>
+
+<!-- 5 -->
+<section class="s" style="background:linear-gradient(200deg,#1b1464,#6a11cb)">
+<h1 class="pop" style="font-size:34px">A che ora scrivete cazzate</h1>
+<p>Picco assoluto alle <b>18:00</b> (7.447 messaggi): ora dell'ape, ovviamente.</p>
+<div class="hours" id="hours"></div><div class="hl"><span>0</span><span>6</span><span>12</span><span>18</span><span>23</span></div>
+<p>Dopo mezzanotte ma prima delle 5 sono partiti <b>6.791 messaggi</b>. Di notte Adam da solo ne ha mandati 378. Dormire? Ma che bisogno c'è.</p></section>
+
+<!-- 6 -->
+<section class="s" style="background:#f107a3">
+<div class="chip">Giorno più folle</div>
+<div class="big pop" style="font-size:clamp(70px,24vw,110px)">1.205</div>
+<h1 style="font-size:30px">messaggi in un giorno</h1>
+<p>È successo il <b>25 giugno 2019</b>. Di questi, <b>1.106 erano solo sticker</b> e più di mille sono partiti tra mezzanotte e l'una. Gilli da solo ne ha mandati 274. Nessuno ha dormito, nessuno ha una spiegazione.</p></section>
+
+<!-- 7 · DIO -->
+<section class="s" style="background:linear-gradient(155deg,#130b28,#4a103d 56%,#11102a)">
+<div class="chip pop">lessico certificato USAC</div>
+<h1 class="pop" style="font-size:34px;color:#ffd60a">Le parole che vivono attaccate a DIO</h1>
+<p class="sm">Varianti unite quando cambia solo lo spazio o la desinenza. Conteggio di messaggi della chat.</p>
+<div id="diow" style="margin-top:10px"></div>
+<p style="margin-top:10px;font-size:13px">La grammatica è crollata, ma la fantasia combinatoria è rimasta in piedi.</p></section>
+
+<!-- 8 -->
+<section class="s" style="background:linear-gradient(160deg,#ffb300,#ff4d2e)">
+<div class="emo pop">😂</div>
+<div class="big" style="font-size:clamp(60px,22vw,100px);margin-top:8px">7.743</div>
+<p>volte usata. Emoji numero uno, <b>Mighe</b> la usa un casino ma è anche il re dei 🎉 (445). Poi 🥳 1.275, 🍾 801, 😘 1.537. Praticamente un compleanno ogni giorno. Ah, e <b>"auguri"</b> è stato scritto 1.933 volte: Patty primo posto con 97.</p></section>
+
+<!-- 9 -->
+<!-- Q1 -->
+<section class="s" style="background:linear-gradient(170deg,#ff0080,#7928ca);justify-content:flex-start;padding-top:60px;overflow-y:auto">
+<h1 class="pop" style="font-size:32px">Frasi che resteranno nella storia</h1>
+<div class="aw">“Loro fanno le serate al Matis, noi alla Poli di Casumaro”<br><span class="sm">Goli, 2022</span></div>
+<div class="aw">“Con la luce fino alle 19, caldo, Campari”<br><span class="sm">Adam, aprile 2020</span></div>
+<div class="aw">“La mia polo pensa di essere al Malua”<br><span class="sm">Marcello, 2019</span></div>
+<div class="aw">“Non fategli toccare l'acqua dopo mezzanotte!”<br><span class="sm">Giacomo Guaral, 2021</span></div>
+<div class="aw">“Non sono stato io a prenderla a pagnotte raga non so”<br><span class="sm">Marcello, 2020</span></div>
+<div class="aw">“La coccinella gialla si inginocchia mentre legge queste cose”<br><span class="sm">Rachele, 2020</span></div>
+</section>
+
+<!-- Q2 -->
+<section class="s" style="background:linear-gradient(170deg,#0f9b8e,#1a1033);justify-content:flex-start;padding-top:60px;overflow-y:auto">
+<h1 class="pop" style="font-size:32px">Ancora peggio (in bene)</h1>
+<div class="aw">“Ragazzi vi annuncio che all'età di 22 anni finalmente Nicolas Tassi sta facendo le guide per la patente”<br><span class="sm">Adam, 2019</span></div>
+<div class="aw">“Alla fine la cena fuori si è trasformata in un aperitivo al Sorriso e cibo d'asporto”<br><span class="sm">Adam, 2019</span></div>
+<div class="aw">“Credo che lunedì Marengo e originalità non combacino”<br><span class="sm">Luke, 2019</span></div>
+<div class="aw">“Tanto a entrambi piace lavorare per finta”<br><span class="sm">Giacomo Bagni, 2021</span></div>
+<div class="aw">“Ha detto che mi sposa per un milione”<br><span class="sm">Alice, 2018</span></div>
+<div class="aw">“Se la vedo in giro la rigo”<br><span class="sm">Gilli, 2019</span></div>
+<div class="aw">“Sono stupidi primini ora si spiega tutto”<br><span class="sm">Manuel, 2018</span></div>
+</section>
+
+<!-- ABS -->
+<section class="s" style="background:#ffd60a;color:#1a1033;justify-content:flex-start;padding-top:60px;overflow-y:auto">
+<h1 class="pop" style="font-size:32px">Situazioni assurde</h1>
+<div class="aw" style="background:#1a103322">🛌 <b>Il gruppo dormiente</b><br>Creato nel 2014, primo messaggio vero nel 2018. 1.631 giorni di silenzio. Poi non vi siete più fermati.</div>
+<div class="aw" style="background:#1a103322">🧩 <b>La notte degli sticker</b><br>25/06/2019: 1.106 sticker in un giorno. Mille tra mezzanotte e l'una. Ringhio ne ha messi 177, Adam 167.</div>
+<div class="aw" style="background:#1a103322">📋 <b>Il copia-incolla gemello</b><br>23/02/2020: Andre e Tractor hanno incollato lo stesso comunicato della Regione, 5.500 caratteri ciascuno. Siete la stessa persona.</div>
+<div class="aw" style="background:#1a103322">💉 <b>Il giorno dei tamponi</b><br>05/01/2022: 317 messaggi tra positivi, farmacie e “qualcuno venga da Pasti”. Un'odissea.</div>
+<div class="aw" style="background:#1a103322">📜 <b>I comunicati ufficiali</b><br>Goli ha scritto un messaggio da 1.797 caratteri, Daniel un “AVVISO” da 1.461 per il QQQ. Roba da Gazzetta Ufficiale.</div>
+<div class="aw" style="background:#1a103322">🫥 <b>292 messaggi cancellati</b><br>292 volte “this message was deleted”. Il re è Gilli (84), che sa sempre cosa non andava detto.</div>
+</section>
+
+<!-- SCENA 1 · sillogismo -->
+<section class="s" style="background:linear-gradient(150deg,#ff8a00,#ff315d 57%,#6f1b8f)">
+<div class="chip pop">reperti · 21 settembre 2018</div>
+<h1 class="pop" style="font-size:34px">Il teorema di Marracash</h1>
+<div class="chatlog">
+<div class="bubble"><span class="who">Patty</span><p>Droga vuol dire strada ahaha</p></div>
+<div class="bubble"><span class="who">Goli</span><p>Droga = strada<br>Strada = Marracash<br>Droga = Marracash</p></div>
+<div class="bubble"><span class="who">Bab</span><p>Strada = droga</p></div>
+</div>
+<div class="scene-note">Tre passaggi logici e siamo già alla laurea honoris causa in rap italiano.</div></section>
+
+<!-- SCENA 2 · BYOB -->
+<section class="s" style="background:linear-gradient(155deg,#00a896,#164e63 52%,#19113d)">
+<div class="chip pop">reperti · 19 settembre 2018</div>
+<h1 class="pop" style="font-size:34px">BYOB: il rebranding</h1>
+<div class="chatlog">
+<div class="bubble"><span class="who">Marcello</span><p>Marengo Tuesday. Format: BYOB, perché la settimana lavorativa/scolastico fa schifo ma noi facciamo più schifo.</p></div>
+<div class="bubble"><span class="who">Marcello</span><p>Bring Your Own Beverage. Ognuno porta qualcosa.</p></div>
+<div class="bubble"><span class="who">Alessia</span><p>Beh direi che è sempre il nostro format.</p></div>
+<div class="bubble"><span class="who">Marcello / Alessia</span><p>«Oh Figoso è Na roba particolare» — «Oh fig-oso» — «Fig-osis-simo»</p></div>
+</div>
+<div class="scene-note">Avete ribattezzato una serata improvvisata e vi siete convinti di aver fondato una startup.</div></section>
+
+<!-- SCENA 3 · rituale -->
+<section class="s" style="background:linear-gradient(150deg,#5b21b6,#be185d 55%,#f97316)">
+<div class="chip pop">reperti · 11 gennaio 2020</div>
+<h1 class="pop" style="font-size:34px">Il rituale dimenticato</h1>
+<div class="chatlog">
+<div class="bubble"><span class="who">Adam</span><p>Però bisogna fare qualcosa.</p></div>
+<div class="bubble"><span class="who">Manuel</span><p>Fate un pene party. È tanto che non viene effettuato questo rituale.</p></div>
+<div class="bubble"><span class="who">Manuel</span><p>Pedo-satanico.</p></div>
+<div class="bubble"><span class="who">Manuel</span><p>Chi sa sa 😂</p></div>
+<div class="bubble"><span class="who">Ringhio</span><p>Fasscciamolo</p></div>
+</div>
+<div class="scene-note">La proposta culturale della serata era già finita prima ancora di iniziare.</div></section>
+
+<!-- SCENA 4 · alta cucina -->
+<section class="s" style="background:linear-gradient(155deg,#9d174d,#3b0764 52%,#111827)">
+<div class="chip pop">reperti · 28 settembre 2023</div>
+<h1 class="pop" style="font-size:34px">Alta cucina da USAC</h1>
+<div class="chatlog">
+<div class="bubble"><span class="who">Manuel</span><p>Testicoli impanati su crema di pene?</p></div>
+<div class="bubble"><span class="who">Marcello</span><p>Pene frullato brutta atoria</p></div>
+<div class="bubble"><span class="who">Lollo Chef</span><p>È il mio piatto forte.</p></div>
+<div class="bubble"><span class="who">Manuel</span><p>No, la crema viene estratta.</p></div>
+<div class="bubble"><span class="who">Lollo Chef / Alessia</span><p>«Fondo bruno 💦» — «Jus d’oca»</p></div>
+</div>
+<div class="scene-note">La guida Michelin non ha lasciato recensioni. Ha lasciato il gruppo.</div></section>
+
+<!-- SCENA 5 · Don Marcello -->
+<section class="s" style="background:linear-gradient(150deg,#172554,#312e81 48%,#831843)">
+<div class="chip pop">reperti · 31 ottobre 2018</div>
+<h1 class="pop" style="font-size:34px">Don Marcello e il Pentateuco</h1>
+<div class="chatlog">
+<div class="bubble"><span class="who">Marcello</span><p>Giovanni 8:12: interpretarla così è una parafrasi un po’ lontana. La Zoboli mi darebbe 5 se facessi una cosa del genere con Dante.</p></div>
+<div class="bubble"><span class="who">Marcello</span><p>Satana non è nemmeno nominato.</p></div>
+<div class="bubble"><span class="who">Goli</span><p>Don Marcello</p></div>
+<div class="bubble"><span class="who">Patty</span><p>Marci porco dio pt 2</p></div>
+<div class="bubble"><span class="who">Manuel</span><p>Mettetegli delle maschere del diavolo nel giardino.</p></div>
+</div>
+<div class="scene-note">Una discussione su Halloween è diventata una lezione di religione con interruzioni dal pubblico.</div></section>
+
+<!-- FIX -->
+<section class="s" style="background:linear-gradient(160deg,#ff4d2e,#ffb300);color:#1a1033">
+<h1 class="pop" style="font-size:34px">Le frasi che dite sempre</h1>
+<div class="row"><span class="n">“io ci sono”</span><div class="bar" style="width:100%;background:#1a1033"></div><em>1.350</em></div>
+<div class="row"><span class="n">“non ci sono”</span><div class="bar" style="width:44%;background:#1a1033"></div><em>592</em></div>
+<div class="row"><span class="n">“a che ora”</span><div class="bar" style="width:37%;background:#1a1033"></div><em>499</em></div>
+<div class="row"><span class="n">“chi c'è”</span><div class="bar" style="width:25%;background:#1a1033"></div><em>337</em></div>
+<div class="row"><span class="n">“me va bene”</span><div class="bar" style="width:23%;background:#1a1033"></div><em>316</em></div>
+<p><b>Tractor</b> è il re del “io ci sono” (324 volte) ma anche del “non ci sono” (114). Ha confermato e disdetto più serate di una agenzia di viaggi.<br>Per le domande: <b>Adam</b> (1.070) e <b>Alessia</b> (1.067) vi hanno chiesto tutto. E “qualcuno…?” lo chiedono 200 volte Adam e 200 Matti.</p></section>
+
+<!-- COPPIE -->
+<section class="s" style="background:linear-gradient(170deg,#ff6a00,#ee0979)">
+<h1 class="pop" style="font-size:32px">Le coppie di fatto</h1>
+<p class="sm">chi risponde più spesso a chi</p>
+<div class="aw">💞 <b>Tractor → Adam: 760 volte</b><br>Il record. Non riesce a non rispondergli.</div>
+<div class="aw">💞 <b>Gilli → Adam: 711 volte</b><br>Altro che fidanzati.</div>
+<div class="aw">💞 <b>Adam → Gilli 670, Adam → Tractor 662</b><br>Il triangolo del gruppo, con Adam al centro.</div>
+<div class="aw">💞 <b>Daniel → Tractor: 421</b><br>Daniel è arrivato nel 2021 e ha scelto subito il suo.</div>
+<p>Tractor è anche il più taggato di tutti: <b>190 volte</b> con la @. Adam secondo con 146, Goli terzo con 142.</p></section>
+
+<!-- GIORNI -->
+<section class="s" style="background:#0f2027;color:#fff">
+<h1 class="pop" style="font-size:32px;color:#ffd60a">Quando siete peggio</h1>
+<div class="row"><span class="n">Sabato</span><div class="bar" style="width:100%;background:#ffd60a"></div><em>14.819</em></div>
+<div class="row"><span class="n">Venerdì</span><div class="bar" style="width:94%"></div><em>13.910</em></div>
+<div class="row"><span class="n">Martedì</span><div class="bar" style="width:82%"></div><em>12.229</em></div>
+<div class="row"><span class="n">Lunedì</span><div class="bar" style="width:79%"></div><em>11.635</em></div>
+<div class="row"><span class="n">Mercoledì</span><div class="bar" style="width:70%;background:#f107a3"></div><em>10.360</em></div>
+<p>Il sabato vince ovviamente, il <b>mercoledì</b> è il giorno più morto. Il mese peggiore è <b>maggio 2019</b>: 4.791 messaggi in 31 giorni. Il più mattiniero è <b>Mighe</b> (161 messaggi tra le 6 e le 9). Il più nottambulo, <b>Adam</b> (378 tra le 2 e le 5).</p></section>
+
+<!-- ONORE -->
+<section class="s" style="background:linear-gradient(170deg,#11998e,#38ef7d);color:#102a1d;justify-content:flex-start;padding-top:60px;overflow-y:auto">
+<h1 class="pop" style="font-size:30px">Menzioni d'onore</h1>
+<div class="aw" style="background:#10102a22">🎉 <b>Mighe</b>: 3.041 messaggi. Il re dei 🎉 (445) e dei 😂 (787).</div>
+<div class="aw" style="background:#10102a22">🌈 <b>Rachele</b>: 3.106 messaggi e la frase della coccinella gialla che si inginocchia.</div>
+<div class="aw" style="background:#10102a22">🛠️ <b>Luke</b>: 2.976 messaggi. Ha cancellato 41 messaggi: secondo dopo Gilli.</div>
+<div class="aw" style="background:#10102a22">📜 <b>Andre</b>: 2.054 messaggi. Il gemello del copia-incolla di Tractor.</div>
+<div class="aw" style="background:#10102a22">🐺 <b>Ringhio</b>: 1.975 messaggi, 177 sticker nella notte del 25 giugno 2019.</div>
+<div class="aw" style="background:#10102a22">🩺 <b>Bab</b>: 1.877 messaggi. "Io sono ancora positivo Gesù infame" (05/01/2022).</div>
+<div class="aw" style="background:#10102a22">🍼 <b>Lucia, Devis, Alice</b>: la seconda linea che regge il gruppo. 1.823, 1.653 e 1.613 messaggi.</div>
+</section>
+
+<!-- PROFILES -->
+<!-- 10 -->
+<section class="s" style="background:linear-gradient(180deg,#4361ee,#3a0ca3);justify-content:flex-start;padding-top:60px;overflow-y:auto">
+<h1 class="pop" style="font-size:34px">Premi ignoranti</h1>
+<div class="aw">🏆 <b>Mr. Vocale: Daniel</b><br>715 audio mandati. Nessuno li ascolta ma lui insiste.</div>
+<div class="aw">🧻 <b>Sticker maniaco: Gilli</b><br>1.558 sticker. Ha pure cancellato 84 messaggi: ha il record di "ops ho sbagliato".</div>
+<div class="aw">🫡 <b>Re di "idem" e "arrivo": Tractor</b><br>265 idem e 300 arrivo. Ha anche ucciso la chat 522 volte (ultimo a scrivere prima del silenzio).</div>
+<div class="aw">📢 <b>CAPS LOCK: Manuel</b><br>88 messaggi TUTTI IN MAIUSCOLO. Urla e basta.</div>
+<div class="aw">🗣️ <b>"RAGA": Marcello</b><br>242 volte. Ed è quello che manda più link (61): la tua zia di Facebook.</div>
+<div class="aw">📸 <b>Fotografo: Adam</b><br>356 foto. Ovviamente anche lui.</div>
+<div class="aw">🏠 <b>Padrone del QQQ: Daniel</b><br>334 volte che ha nominato il posto dove ci troviamo. Praticamente l'agente immobiliare del gruppo. Subito dopo Tractor (163) e Marcello (160).</div>
+</section>
+
+<!-- 11 -->
+<section class="s" style="background:#0b132b">
+<h1 class="pop" style="font-size:34px;color:#00f5d4">La vostra era</h1>
+<div class="hours" id="years" style="height:170px"></div>
+<div class="hl" id="yl"></div>
+<p>Il <b>2019</b> è stato il vero anno di gloria: <b>23.738 messaggi</b>. Poi il 2020 (chi se lo scorda), e giù fino al minimo del 2024 (4.929). Ma nel 2025 siete tornati: 7.475. Gente che non molla.</p></section>
+
+<!-- 12 -->
+<section id="fin" class="s" style="background:linear-gradient(160deg,#f107a3,#ffd60a);color:#1a1033;text-align:center;align-items:center">
+<div class="emo pop">🐦💛🦄🚑</div>
+<h1 style="margin-top:18px">Siete degli sfigati. Ma i miei sfigati.</h1>
+<p>Dal 2018 al 2026, 85.234 messaggi e nessuno ha ancora risposto alla domanda "qualcuno esce stasera?"</p>
+<p class="sm" style="color:#1a1033">Ci vediamo al prossimo Wrapped.</p></section>
+
+<div class="nav"><div id="prev"></div><div id="next"></div></div>
+<div class="hint" id="hint">← scorri · tocca per continuare →</div>
+</div>
+<script>
+
+const dioWords=[["DIOCAN / DIO CAN",180],["DIO PORC*",143],["PORCO DIO / PORCODIO",124],["DIO BOIA",77],["DIO CANE",39],["DIO MAIAL*",39],["DIO MERDA",25],["DIO BESTIA",22]];
+document.getElementById('diow').innerHTML=dioWords.map((w)=>`<div class="row" style="font-size:12px;margin:6px 0"><span class="n" style="width:132px;font-size:11px;letter-spacing:.02em">${w[0]}</span><div class="bar" style="width:${w[1]/180*100}%"></div><em>${w[1].toLocaleString('it')}</em></div>`).join('');
+const P=[
+{n:"Adam",c:"#ff4d2e,#ffb300",t:"Il presidente",m:11315,p:"13,3%",s:[["1.281","messaggi di notte"],["1.070","domande"],["1.422","sticker"],["356","foto"],["101","sondaggi"],["Sabato 18:00","orario top"]],w:"stasera, qualcuno, 🎣",q:["Con la luce fino alle 19, caldo, Campari","Non è concepibile per me finire di lavorare e andare dritto a casa","Ringraziatemi per questo video, guardatelo tutto"],f:"È stato il primo ad aprire la chat dopo ore di silenzio: 523 volte. Senza di lui il gruppo sarebbe un cimitero. Ha anche 81 🎣, non chiedere perché."},
+{n:"Marcello",c:"#2193b0,#6dd5ed",t:"Il portavoce",m:6600,p:"7,7%",s:[["6,9","parole a messaggio"],["306","pollici 👍"],["242","\"raga\""],["96","\"raggiungo\""],["61","link condivisi"],["Venerdì 21:00","orario top"]],w:"raga, c'è, esco, raggiungo",q:["Sembro Robinson Crusoe","Ho visto la grande solitudine senza automobili","Non sono stato io a prenderla a pagnotte raga non so"],f:"Scrive il più lungo dopo Goli e dice ‘raga’ come un tic. Ha il record di 👍 e di link: il vostro addetto stampa."},
+{n:"Gilli",c:"#7b2ff7,#f107a3",t:"Lo stickerista",m:5870,p:"6,9%",s:[["1.558","sticker (27%!)"],["84","cancellati"],["796","messaggi di notte"],["4,2","parole a messaggio"],["274","sticker il 25/06/19"],["Martedì 20:00","orario top"]],w:"navetta, 🚨, lol",q:["È un tossico per forza","The show must go on","Se la vedo in giro la rigo"],f:"Più di un messaggio su quattro è uno sticker. Ha cancellato 84 messaggi: tutto quello che sapete è solo quello che ha deciso di tenere."},
+{n:"Tractor",c:"#00c896,#0a6e5a",t:"Il Sì-Man",m:5765,p:"6,8%",s:[["320","parolacce (record)"],["324","\"io ci sono\""],["114","\"non ci sono\""],["190","volte taggato"],["522","chat uccise"],["Sabato 21:00","orario top"]],w:"idem, falzoni, dio, adesso",q:["Bisogna Pattayare, poi ci sono anche i miei capi","Ma dio porc si vede proprio dio maial che non hai un cazzo da fare","Potremmo sentire Remo, Locanda 22, Entrà"],f:"Il più sboccato, il più taggato e l'ultimo a scrivere prima del silenzio. Ha confermato e disdetto più serate di una agenzia di viaggi."},
+{n:"Alessia",c:"#f107a3,#ffd60a",t:"La fondatrice",m:5620,p:"6,6%",s:[["1.067","domande"],["760","😂"],["736","messaggi di notte"],["95","\"lavoro\""],["275","aperture di chat"],["Martedì 14:00","orario top"]],w:"lavoro, perché, così",q:["Quel porco di dio poteva anche far venir giu meno nebbia madonna lurida","Porto i trappolini","Comunque se vi interessa ieri sera da me c'era Pimpinella invece"],f:"Ha creato lei il gruppo il 31 marzo 2014. Un messaggio su cinque suo è una domanda: la persona che vi ha chiesto di più 'a che ora?'."},
+{n:"Manuel",c:"#4361ee,#3a0ca3",t:"Il grido",m:4670,p:"5,5%",s:[["88","messaggi in MAIUSCOLO"],["609","messaggi con risate"],["779","😂"],["215","🥳"],["404","messaggi di notte"],["Domenica 21:00","orario top"]],w:"hahahahaha, tractor, cose",q:["Forse è la seconda mutazione, la mutazione esplosiva del virus","Fig è un po simile a spongebob","Sono stupidi primini ora si spiega tutto"],f:"Il giorno 1 della chat attiva ha scritto PIZZA DA MARENGO in maiuscolo. Da allora Marengo è stata nominata 1.058 volte. Vi ha cambiato la vita."},
+{n:"Daniel",c:"#ff9a00,#ee0979",t:"Il vocale",m:4657,p:"5,5%",s:[["715","audio"],["334","\"QQQ\""],["125","\"grazie\" (il più educato)"],["82","GIF"],["4","sticker totali"],["Sabato 13:00","orario top"]],w:"qqq, rega, bel, tanti",q:["Abbiamo firmato un contratto di pace","Shake like a bomber","Guardate che belli i fuochi che ho sparato ieri sera"],f:"È arrivato solo a gennaio 2021 ma ha scritto quasi quanto chi c'è dal 2018. Un messaggio su sei suo è un audio. Ha mandato un AVVISO da 1.461 caratteri sul QQQ."},
+{n:"Matti",c:"#ee0979,#ff6a00",t:"Il tenerone",m:3620,p:"4,2%",s:[["520","domande"],["66","❤"],["65","💖"],["52","🍻"],["28","\"auguroni\""],["Sabato 18:00","orario top"]],w:"stas, min, verso, auguroni",q:["22/11/2018 · Regaz ci siamo io e Ringhio da Marengo e da dietro al frigo sono usciti 3 topi","13/01/2019 · Mmm buono, fanno bene i topi","03/11/2018 · Auguri my fig 😘🥂🎉"],f:"Il tenerone dei cuori, ma anche il critico gastronomico ufficiale della fauna di Marengo. Ti manda affetto e aggiornamenti sui roditori con la stessa naturalezza."},
+{n:"Goli",c:"#56ab2f,#a8e063",t:"Il poeta",m:3441,p:"4,0%",s:[["6,9","parole a messaggio"],["1.797","caratteri, il suo più lungo"],["195","❤"],["102","🌈"],["60","🏔"],["Sabato 14:00","orario top"]],w:"hahaha, raga, rega",q:["Loro fanno le serate al matis, noi alla poli di casumaro","Vengo a fumare una paglia con la sabri e il gatto","Meglio di una locandina del malua"],f:"Il più prolisso insieme a Marcello. Ha scritto il comunicato più lungo di sempre (1.797 caratteri) e ha 142 tag nei messaggi altrui: sempre chiamato in causa."},
+{n:"Patty",c:"#614385,#516395",t:"La sindaca dell'ape",m:3227,p:"3,8%",s:[["99","\"ape\""],["97","\"auguri\" (record)"],["594","domande"],["75","\"lavoro\""],["6,2","parole a messaggio"],["Sabato 17:00","orario top"]],w:"c'è, lavoro, ape, sera",q:["Perché a livello cognitivo siamo messi come Gigi Poletti","Asiago is the new Sorriso","Ma ghigo ha una morosa oddio"],f:"Quella che organizza sempre l'ape e fa gli auguri a tutti: 97 volte ha scritto 'auguri', più di chiunque."}
+];
+const fin=document.getElementById('fin');
+fin.insertAdjacentHTML('beforebegin',P.map((x,i)=>`<section class="s" style="background:linear-gradient(170deg,${x.c});padding-top:52px;justify-content:flex-start"><div class="chip">n°${i+1} per messaggi</div><h1 class="pop" style="font-size:52px">${x.n}</h1><p style="margin-top:2px;font-size:15px">${x.t} · <b>${x.m.toLocaleString('it')}</b> messaggi (${x.p})</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:12px">${x.s.map(s=>`<div class="aw" style="margin:0;padding:8px 10px"><b style="font-size:17px">${s[0]}</b><br><span style="font-size:11px;opacity:.85">${s[1]}</span></div>`).join('')}</div><p class="sm" style="margin-top:10px">parole sue: <b>${x.w}</b></p>${x.q.map(q=>`<div class="aw" style="margin:5px 0;padding:8px 12px;font-size:13px">“${q}”</div>`).join('')}<p style="font-size:13px;margin-top:8px">${x.f}</p></section>`).join(''));
+const slides=[...document.querySelectorAll('.s')],bars=document.getElementById('bars');
+slides.forEach(s=>{const d=document.createElement('div');d.className='in';while(s.firstChild)d.appendChild(s.firstChild);s.appendChild(d);});
+function fit(s){const d=s.querySelector('.in');d.style.zoom=1;const c=getComputedStyle(s);const av=s.clientHeight-parseFloat(c.paddingTop)-parseFloat(c.paddingBottom);const h=d.offsetHeight;d.style.zoom=h>av?(av/h*0.97):1;}
+addEventListener('resize',()=>fit(slides[i]));
+slides.forEach(()=>bars.appendChild(document.createElement('i')).appendChild(document.createElement('b')));
+let i=0;
+function go(n){i=Math.max(0,Math.min(slides.length-1,n));slides.forEach((s,k)=>s.classList.toggle('show',k===i));fit(slides[i]);[...bars.children].forEach((b,k)=>b.classList.toggle('on',k<=i));const hint=document.getElementById('hint');if(hint)hint.textContent=(i+1)+' / '+slides.length+'   ·   '+(i===slides.length-1?'fine del delirio':'tocca per andare avanti');}
+document.getElementById('next').onclick=()=>go(i+1);
+document.getElementById('prev').onclick=()=>go(i-1);
+addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key===' '){e.preventDefault();go(i+1)}if(e.key==='ArrowLeft'){e.preventDefault();go(i-1)}});
+let touchX=0,touchY=0;
+document.getElementById('app').addEventListener('touchstart',e=>{if(!e.touches||!e.touches[0])return;touchX=e.touches[0].clientX;touchY=e.touches[0].clientY},{passive:true});
+document.getElementById('app').addEventListener('touchend',e=>{if(!e.changedTouches||!e.changedTouches[0])return;const dx=e.changedTouches[0].clientX-touchX,dy=e.changedTouches[0].clientY-touchY;if(Math.abs(dx)>48&&Math.abs(dx)>Math.abs(dy)*1.25){e.preventDefault();go(i+(dx<0?1:-1))}},{passive:false});
+const topList=[["Adam",11315],["Marcello",6600],["Gilli",5870],["Tractor",5765],["Alessia",5620],["Manuel",4670],["Daniel",4657],["Matti",3620]];
+document.getElementById('top').innerHTML=topList.map((t,k)=>`<div class="row"><span class="n">${k+1}. ${t[0]}</span><div class="bar" style="width:${t[1]/11315*100*.62}%"></div><em>${t[1].toLocaleString('it')}</em></div>`).join('');
+const hrs=[3703,1701,681,459,247,125,78,300,476,1035,2378,3948,5979,6361,6909,5533,5668,6787,7447,6442,6538,6300,3667,2472];
+document.getElementById('hours').innerHTML=hrs.map((h,k)=>`<div style="height:${h/7447*100}%;${k===18?'background:#ffd60a':''}"></div>`).join('');
+const yrs=[[2018,4949],[2019,23738],[2020,14195],[2021,9930],[2022,8432],[2023,6734],[2024,4929],[2025,7475],[2026,4849]];
+document.getElementById('years').innerHTML=yrs.map(y=>`<div style="height:${y[1]/23738*100}%;${y[0]===2019?'background:#00f5d4':''}"></div>`).join('');
+document.getElementById('yl').innerHTML=yrs.map(y=>`<span>${String(y[0]).slice(2)}</span>`).join('');
+
+slides.forEach(s=>{s.insertAdjacentHTML('beforeend','<b class="orb"></b><b class="orb o2"></b>');s.querySelectorAll('.in>*,.chatlog>*,.aw,.row,.hours>div').forEach(e=>e.style.setProperty('--j',[...e.parentNode.children].indexOf(e)))});
+const _go=go;let el=0,last=0,paused=false,raf=0,hold=0,wasHold=false,DUR=7000;
+function tick(now){if(!paused&&!document.hidden)el+=now-last;last=now;const p=Math.min(1,el/DUR);bars.children[i].firstChild.style.width=p*100+'%';if(p>=1&&i<slides.length-1){go(i+1);return}if(p<1)raf=requestAnimationFrame(tick)}
+go=function(n){const o=i;_go(n);[...bars.children].forEach((b,k)=>{b.classList.toggle('on',k<=i);b.classList.toggle('cur',false);b.firstChild.style.width=''});
+slides[i].querySelectorAll('.big').forEach(e=>{const t=e.textContent;if(!/^[\d.]+$/.test(t))return;const v=+t.replace(/\./g,''),t0=performance.now();(function f(now){const p=Math.min(1,(now-t0)/1000);e.textContent=Math.round(v*(1-Math.pow(1-p,3))).toLocaleString('it');if(p<1)requestAnimationFrame(f)})(t0)});
+document.querySelectorAll('.cf').forEach(c=>c.remove());
+if(i===slides.length-1)for(let k=0;k<44;k++)slides[i].insertAdjacentHTML('beforeend',`<u class="cf" style="--x:${Math.random()*100}%;--c:${['#ffd60a','#00f5d4','#ff4d9a','#fff'][k%4]};--d:${3+Math.random()*2.5}s;--w:${Math.random()*1.5}s"></u>`);
+if(o!==i&&navigator.vibrate)navigator.vibrate(6)};
+const nav=document.querySelector('.nav');
+nav.addEventListener('pointerdown',()=>{paused=true;hold=performance.now()});
+['pointerup','pointercancel','pointerleave'].forEach(t=>nav.addEventListener(t,()=>{paused=false}));
+document.getElementById('next').onclick=()=>{if(wasHold){wasHold=false;return}go(i+1)};
+document.getElementById('prev').onclick=()=>{if(wasHold){wasHold=false;return}go(i-1)};
+const rf=()=>fit(slides[i]);addEventListener('orientationchange',rf);if(window.ResizeObserver)new ResizeObserver(rf).observe(document.getElementById('app'));if(document.fonts)document.fonts.ready.then(rf);addEventListener('load',rf);
+go(0);
+
+</script></body></html>
